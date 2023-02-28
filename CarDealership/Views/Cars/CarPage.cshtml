@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <title>Shady Dave's Car Dealership Bonanza</title>
+</head>
+<body>
+  @using CarDealership.Models;
+  <ul>
+  @foreach(Cars c in @Model.GetAll())
+  {
+    <li>@c.Description @c.CarPrice</li>
+  }
+  </ul>
+  <a href="/cars/new">Click here to add a new car.</a>
+</body>
+</html>
