@@ -20,6 +20,13 @@ namespace CarDealership.Tests
     }
 
     [TestMethod]
+    public void OverloadedCarsConstructor_CreatesInstanceOfCars_Cars()
+    {
+      Cars overloadedCars = new Cars("test","somePrice");
+      Assert.AreEqual(typeof(Cars), overloadedCars.GetType());
+    }
+
+    [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
