@@ -13,7 +13,7 @@ namespace CarDearlership
 
       WebApplication app = builder.Build();
 
-      app.UseHttpsRedirection();
+      // app.UseHttpsRedirection();
 
       app.UseRouting();
 

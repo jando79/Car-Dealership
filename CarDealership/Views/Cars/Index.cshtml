@@ -6,7 +6,7 @@
 <body>
   @using CarDealership.Models;
   <ul>
-  @foreach(Cars c in @Model.GetAll())
+  @foreach(Cars c in Model)
   {
     <li>@c.Description @c.CarPrice</li>
   }
