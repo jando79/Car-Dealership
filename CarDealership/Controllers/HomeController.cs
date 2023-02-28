@@ -4,7 +4,7 @@ namespace CarDealership.Controllers
 {
   public class HomeController : Controller
   {
-    [HttpPost("/")]
+    [HttpGet("/")]
     public ActionResult Index()
     {
       return View();

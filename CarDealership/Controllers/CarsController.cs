@@ -20,10 +20,17 @@ namespace CarDealership.Controllers
       return View();
     }
 
-    [HttpPost("/cars")]
-    public ActionResult Create(string description, string carPrice)
+    [HttpGet("/cars/clear")]
+    public ActionResult Clear()
     {
-      Cars myCars = new Cars(description, carPrice);
+      Cars.ClearAll();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost("/cars")]
+    public ActionResult Create(string carMakeAndModel, string carPrice)
+    {
+      Cars myCars = new Cars(carMakeAndModel, carPrice);
       return RedirectToAction("Index");
     }
   }
