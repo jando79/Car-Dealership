@@ -8,12 +8,10 @@ namespace CarDealership.Tests
   [TestClass]
   public class CarsTests : IDisposable
   {
-
     public void Dispose()
     {
       Cars.ClearAll();
     }
-
     [TestMethod]
     public void CarsConstructor_CreatesInstanceOfCars_Cars()
     {
